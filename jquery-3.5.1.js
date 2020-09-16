@@ -1465,18 +1465,7 @@
                 // IE/Edge sometimes throw a "Permission denied" error when strict-comparing
                 // two documents; shallow comparisons work.
                 /* eslint-disable eqeqeq */
-                return a == document
-                  ? -1
-                  : b == document
-                  ? 1
-                  : /* eslint-enable eqeqeq */
-                  aup
-                  ? -1
-                  : bup
-                  ? 1
-                  : sortInput
-                  ? indexOf(sortInput, a) - indexOf(sortInput, b)
-                  : 0
+                return a == document ? -1 : b == document ? 1 : /* eslint-enable eqeqeq */ aup ? -1 : bup ? 1 : sortInput ? indexOf(sortInput, a) - indexOf(sortInput, b) : 0
 
                 // If the nodes are siblings, we can do a quick check
               } else if (aup === bup) {
@@ -7505,7 +7494,6 @@
       }
     })
   }
-
   ;(function () {
     var input = document.createElement('input'),
       select = document.createElement('select'),

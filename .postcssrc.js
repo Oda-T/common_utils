@@ -1,8 +1,8 @@
 //.postcssrc.js
 module.exports = {
   plugins: {
-    "postcss-px2rem": {
-      remUnit: 50,
-    },
-  },
+    'postcss-px2rem': {
+      remUnit: 50
+    }
+  }
 }
