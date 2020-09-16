@@ -1,4 +1,4 @@
-@import "mixins";
+@import 'mixins';
 
 body,
 button,
@@ -7,8 +7,7 @@ select,
 textarea {
   color: #5d656b;
   font-size: $font-size-base;
-  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
-    "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', STHeiti, 'Microsoft Yahei', Tahoma, Simsun, sans-serif;
   line-height: 1;
 }
 body {
