@@ -191,7 +191,7 @@ module.exports = {
     'no-unreachable': 2,
     'no-unsafe-finally': 2,
     'no-unused-vars': [
-      2,
+      1,
       {
         'vars': 'all', // 禁止未使用过的变量
         'args': 'none' // 不检查参数，参数可以声名但不使用
