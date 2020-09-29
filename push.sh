@@ -5,6 +5,6 @@ git init
 
 git add -A
 
-git commit -m 'eslint'
+git commit -m 'babel'
 
 git push https://github.com/Oda-T/common_utils.git master:master
