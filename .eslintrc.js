@@ -9,7 +9,7 @@ module.exports = {
     node: true,
     es6: true
   },
-  extends: ['plugin:vue/recommended', 'eslint:recommended'],
+  extends: ['eslint:recommended'],
   rules: {
     'accessor-pairs': 2,
     'arrow-spacing': [
