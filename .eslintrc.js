@@ -10,31 +10,7 @@ module.exports = {
     es6: true
   },
   extends: ['plugin:vue/recommended', 'eslint:recommended'],
-  // 'extends': ['plugin:vue/recommended', 'eslint:recommended', '@vue/prettier'],
   rules: {
-    'vue/max-attributes-per-line': [
-      2,
-      {
-        'singleline': 10, // 单行最多属性
-        'multiline': {
-          'max': 1,
-          'allowFirstLine': false
-        }
-      }
-    ],
-    'vue/require-default-prop': 0, // prop default非必须
-    'vue/singleline-html-element-content-newline': 'off', // 单行元素折行
-    'vue/multiline-html-element-content-newline': 'off', // 多行元素折行
-    'vue/name-property-casing': ['error', 'PascalCase'], // 驼峰name
-    'vue/html-self-closing': [
-      'error',
-      {
-        'html': {
-          'void': 'always' // 允许html空标签自闭合
-        }
-      }
-    ],
-    'vue/no-v-html': 0, // 启用v-html
     'accessor-pairs': 2,
     'arrow-spacing': [
       2,
