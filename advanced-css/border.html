@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      span {
+        font-size: 100px;
+        border: 1px dashed red;
+        border: 1px dotted red;
+        border: 1px double red;
+        /* 兼容性不好，审美过时 */
+        /* border: 1px inset red;
+            border: 1px outset red;
+            border: 1px groove red;
+            border: 1px ridge red; */
+
+        /* 以下四者没有区别，都等于color */
+        color: red;
+        border-color: red;
+        box-shadow: red;
+        text-shadow: red;
+      }
+      .cross {
+        width: 300px;
+        height: 300px;
+        color: lightblue;
+        border: 5px dashed;
+        position: relative;
+      }
+      .cross::before {
+        content: " ";
+        display: inline-block;
+        width: 90%;
+        height: 0px;
+        border-top: 50px solid;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .cross::after {
+        content: " ";
+        display: inline-block;
+        width: 0px;
+        height: 90%;
+        border-left: 50px solid;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .cross:hover {
+        /* 因为继承自color，所以边框颜色一起变化 */
+        color: violet;
+      }
+      .img {
+        border-right: 50px solid transparent;
+        background-position: 100% 40px;
+      }
+
+      input[type="checkbox"] {
+        -webkit-appearance: none;
+        outline: none;
+        border: 2px solid transparent;
+        box-shadow: inset 0 1px,inset 1px 0,inset -1px 0,inset 0 -1px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <span id="span">text</span>
+
+    <!-- 伪元素实现十字 -->
+    <div class="cross"></div>
+
+    <!-- 图片右对齐50px -->
+    <div class="img"></div>
+
+    <!-- 增加复选框点击区域 -->
+    <input type="checkbox" class="checkbox" id="checkbox" />
+
+    <!-- input取色框 -->
+    <input type="color" id="color" />
+
+    <script>
+      let color = document.querySelector("#color");
+      let span = document.querySelector("#span");
+      color.addEventListener("change", () => {
+        span.style.color = color.value;
+      });
+    </script>
+  </body>
+</html>

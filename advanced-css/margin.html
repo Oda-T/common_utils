@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Ⅰ 改变可视尺寸-->
+
+      <!-- margin 可以改变元素的可视尺寸clientWidth ，适用于没有设定width height的普通block水平元素，只改变水平方向-->
+      <!-- margin 改变元素的占据尺寸，对block、inline-block都适用，水平垂直均可-->
+
+    <!-- Ⅱ 百分比-->
+
+      <!-- margin 百分比相对于容器宽度计算，绝对定位元素百分比相对于祖先定位元素宽度计算 -->
+      <!-- 一个长方形 ，发生了margin重叠-->
+      <div style="width: 200px;background-color: gray;overflow: hidden;"><div style="margin:50%"></div></div>
+
+    <!-- Ⅲ margin重叠-->
+    
+      <!-- 1.相邻兄弟元素 -->
+
+      <!-- 2.父级元素和第一个/最后一个子元素，给子元素设置margin-top相当于给父元素设置margin-top -->
+
+        <!-- 干掉父子margin-top重叠 -->
+            <!-- 1.父元素overflow:hidden -->
+            <!-- 2.父元素添加border-top -->
+            <!-- 3.父元素添加padding-top -->
+            <!-- 4.父子元素之间添加&nbsp -->
+
+        <!-- 干掉父子margin-bottom重叠 -->
+            <!-- 1.父元素overflow:hidden -->
+            <!-- 2.父元素添加border-top -->
+            <!-- 3.父元素添加padding-top -->
+            <!-- 4.父子元素之间添加&nbsp -->
+            <!-- 5.父元素声明高度 -->
+
+      <!-- 3.空block元素重叠，高度塌陷 -->
+
+        <!-- 干掉空block元素重叠 -->
+            <!-- 1.元素添加border -->
+            <!-- 2.元素添加padding -->
+            <!-- 3.添加inline元素/文字 -->
+            <!-- 4.添加height -->
+
+    <!--*** 善用margin重叠：推荐margin-top/bottom都写出来，防止移除最后一个元素后，底部元素触底 ***-->
+
+    <!--*** web排版准则：在任何地方嵌套或者直接放入没有css样式的裸div，都不会影响原来的布局 *** -->
+
+    <!-- Ⅳ margin auto 自动填充 -->
+    <div  style="width: 20px; margin: 0 auto;">test</div>
+
+      <!-- block元素本应该占满整个行，但设置宽度后，右侧就出现了剩余空间 -->
+
+      <!-- 有宽度的block元素，自动分配剩余空间 -->
+      <!-- 所以对图片设置auto会失效，对高度设置auto会失效，因为他们默认都不会填充剩余空间 -->
+
+    <!-- Ⅴ 等高布局 -->
+    
+      <!-- margin-bottom 与padding-bottom -->
+
+      <div style="overflow: hidden;">
+        <div style="margin-bottom: -600px;padding-bottom: 600px;float: left;background-color: orange;"><p>左</p><p>左</p></div>
+        <div style="margin-bottom: -600px;padding-bottom: 600px;float: left;background-color: green;">右</div>
+      </div>
+
+    <!-- Ⅵ 如何实现水平垂直居中？ -->
+
+    <div style="height: 200px;background-color: antiquewhite;position: relative;">
+      <div style="position: absolute;left: 0;right: 0;top: 0;bottom: 0;background-color: red;width: 500px;height: 100px;margin: auto;">
+      </div>
+    </div>
+
+    <!-- Ⅶ  margin失效-->
+
+      <!-- 绝对定位元素非定位方向（对立方向）margin会“失效”，很难显示 -->
+
+      <!-- 绝对定位的margin一直有效，但是很难影响其兄弟元素 -->
+
+      <!-- 同样，内联元素由于存在基线对齐，margin设置为很大的负值时，也会失效，强制基线对齐 -->
+
+    </script>
+  </body>
+</html>
