@@ -1,0 +1,44 @@
+/* window dpi 缩放适配 */
+@media all and (max--moz-device-pixel-ratio: 1.09), (-webkit-max-device-pixel-ratio: 1.09), (max-resolution: 1.09dppx) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media all and (min--moz-device-pixel-ratio: 1.1) and (max--moz-device-pixel-ratio: 1.24),
+  (-webkit-min-device-pixel-ratio: 1.1) and (-webkit-max-device-pixel-ratio: 1.24),
+  (min-resolution: 1.1dppx) and (max-resolution: 1.24dppx) {
+  html {
+    font-size: 14.5px;
+  }
+}
+
+@media all and (min--moz-device-pixel-ratio: 1.25) and (max--moz-device-pixel-ratio: 1.49),
+  (-webkit-min-device-pixel-ratio: 1.25) and (-webkit-max-device-pixel-ratio: 1.49),
+  (min-resolution: 1.25dppx) and (max-resolution: 1.49dppx) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media all and (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 1.74),
+  (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 1.74),
+  (min-resolution: 1.5dppx) and (max-resolution: 1.74dppx) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media all and (min--moz-device-pixel-ratio: 1.75) and (max--moz-device-pixel-ratio: 1.99),
+  (-webkit-min-device-pixel-ratio: 1.75) and (-webkit-max-device-pixel-ratio: 1.99),
+  (min-resolution: 1.75dppx) and (max-resolution: 1.99dppx) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media all and (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  html {
+    font-size: 8px;
+  }
+}
