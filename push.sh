@@ -1,3 +1,3 @@
 git add -A
 git commit -m 'eslint'
-git push https://github.com/Oda-T/common_utils.git master
+git push origin master
