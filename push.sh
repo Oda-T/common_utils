@@ -1,3 +1,3 @@
 git add -A
-git commit -m 'eslint'
+git commit -m 'renew prettier'
 git push origin master
